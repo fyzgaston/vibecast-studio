@@ -1,0 +1,71 @@
+.track-list {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 87px);
+
+  @include mobile {
+    height: calc(100% - 30px);
+  }
+
+  &__scroll-wrapper {
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 40px minmax(200px, 1fr) minmax(150px, 262px) minmax(150px, 239px) minmax(20px, 99px);
+    border-bottom: var(--border);
+
+    @include tablet {
+      grid-template-columns: 40px minmax(200px, 1fr) minmax(150px, 262px) minmax(20px, 99px);
+      border-bottom: none;
+    }
+
+    &-item {
+      color: var(--color-gray-05);
+      font-size: 12px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 10px 8px;
+
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5), {
+        @include tablet{
+          display: none;
+        }
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__tracks {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      gap: 20px;
+    }
+  }
+}

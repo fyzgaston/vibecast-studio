@@ -1,0 +1,82 @@
+.sidebar {
+  &__logo-wrapper {
+    @include flex-center;
+
+    padding: 20px;
+    background-color: var(--color-white);
+    border-right: var(--border);
+
+    @include mobile {
+      @include flex-center-start;
+      padding: 15px 16px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    padding: 46px 30px;
+    flex-direction: column;
+    background-color: var(--color-gray-01);
+    height: 100%;
+    overflow: hidden;
+
+    @include mobile {
+      display: flex;
+      padding: 20px 16px;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      height: unset;
+      column-gap: 19px;
+    }
+
+    &-link {
+      padding: 9px 0;
+      z-index: 1;
+
+      @include mobile {
+        padding: 0;
+
+        .button {
+          padding: 10px 16px;
+          border-radius: 30px;
+          background-color: var(--color-white);
+          // мб тут скрывать иконку у мобилки? подумать
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      &--active {
+        position: relative;
+
+        &::before {
+          @include abs-center;
+
+          content: '';
+          background-color: var(--color-white);
+          height: 100%;
+          width: 400px;
+          z-index: -1;
+        }
+
+        @include mobile {
+          .button {
+            color: var(--color-white);
+            background-color: var(--color-orange-01);
+
+            svg {
+              color: var(--color-white);
+            }
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+@use './helpers' as *;
+
+:root {
+  --color-white: #FFFFFF;
+
+  --color-black-01: #171717;
+  --color-black-02: #11253D;
+
+  --color-gray-01: #F5F5F5;
+  --color-gray-02: #E8E8E8;
+  --color-gray-03: #C4C4C4;
+  --color-gray-04: #AAAAAA;
+  --color-gray-05: #A4A4A4;
+
+  --color-orange-01: #FC6D3E;
+  --color-orange-02: #fc5d29;
+
+  --border: var(--border-width-s) solid var(--color-gray-02);
+
+  --border-width-s: 1px;
+
+  --font-family-base: 'Actor', sans-serif;
+
+  --container-padding-x: 30px;
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

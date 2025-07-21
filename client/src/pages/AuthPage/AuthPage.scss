@@ -1,0 +1,32 @@
+.auth-page {
+  @include  flex-center;
+
+  min-height: 100vh;
+  background-color: var(--color-gray-01);
+
+  @include mobile {
+    padding: 16px;
+  }
+
+  &__inner {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 18px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+   &__title {
+     margin-bottom: 20px;
+     text-align: center;
+   }
+
+  &__switch {
+    margin: 20px auto 0;
+  }
+
+  &__switch-link {
+    margin-top: 10px;
+    justify-content: center
+  }
+}

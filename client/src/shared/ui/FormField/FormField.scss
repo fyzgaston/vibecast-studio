@@ -1,0 +1,23 @@
+.form-field {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+
+  &__label {
+    font-size: fluid(18, 14);
+  }
+
+  &__input {
+    font-size: fluid(18, 14);
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-gray-01);
+
+    &::placeholder {
+      color: var(--color-gray-05);
+    }
+  }
+}

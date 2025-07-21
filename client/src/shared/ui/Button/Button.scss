@@ -1,0 +1,53 @@
+.button {
+  @include flex-center;
+
+  column-gap: 12px;
+  color: var(--color-black-02);
+  font-size: fluid(20, 14);
+  line-height: 1;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+
+  @include mobile {
+    column-gap: 8px;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--orange-01 {
+    color: var(--color-orange-01);
+  }
+
+  &--orange-01-bg {
+    padding: fluid(20, 16) fluid(14, 10);
+    border-radius: 30px;
+    background-color: var(--color-orange-01);
+    color: var(--color-white);
+  }
+
+  &--text-mini {
+    font-size: fluid(14, 12);
+    line-height: 1;
+  }
+
+  &--gray-05-text {
+    color: var(--color-gray-04);
+    column-gap: 6px;
+
+    @include hover {
+      color: var(--color-orange-01);
+
+      .icon {
+        color: var(--color-orange-01);
+      }
+    }
+  }
+
+  &--disabled {
+    @include disabled;
+  }
+}

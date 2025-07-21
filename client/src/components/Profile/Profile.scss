@@ -1,0 +1,27 @@
+.profile {
+  @include flex-center-start;
+  column-gap: 8px;
+
+  &__wrapper {
+    display: flex;
+    padding: 3px;
+  }
+
+  &__avatar {
+    @include square(42px);
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include mobile {
+      @include square(25px);
+    }
+  }
+
+  &__username {
+    @include fluid-text(14, 12);
+
+    line-height: 1;
+    font-weight: 400;
+  }
+}

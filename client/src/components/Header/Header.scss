@@ -1,0 +1,27 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 246px;
+  column-gap: 30px;
+
+  @include tablet {
+    gap: 15px;
+  }
+
+  @include mobile {
+    display: flex;
+  }
+
+  .header__search {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .header__user-menu {
+    @include mobile {
+      position: fixed;
+      top: 12px;
+      right: 16px;
+    }
+  }
+}

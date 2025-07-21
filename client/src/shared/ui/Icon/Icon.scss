@@ -1,0 +1,24 @@
+.icon {
+  color: var(--color-gray-04);
+
+  &:not(.icon--hover-none) {
+    @include hover {
+      color: var(--color-orange-01);
+      fill: currentColor;
+    }
+  }
+
+  &--orange-01 {
+    color: var(--color-orange-01);
+
+    @include hover {
+      &:not(.icon--hover-none) {
+        color: var(--color-orange-02);
+      }
+    }
+  }
+
+  &--fill {
+    fill: currentColor;
+  }
+}

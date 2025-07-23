@@ -1,6 +1,6 @@
 import './AudioPlayer.scss';
 import { Icon } from '@/shared/ui/Icon';
-import {ProgressBar, type SliderHandle } from 'shared/ui/ProgressBar';
+import {ProgressBar, type ProgressBarHandle } from 'shared/ui/ProgressBar';
 import Button from '@/shared/ui/Button';
 import {useState, useEffect, useRef, useCallback} from 'react';
 import { useTrackContext } from '@/shared/lib/TrackContext';
@@ -20,8 +20,8 @@ const AudioPlayer = () => {
   const isFavorite = currentTrack ? favorites.includes(currentTrack.id) : false;
 
   const audioRef = useRef<HTMLAudioElement>(null);
-  const sliderRef = useRef<SliderHandle>(null);
-  const volumeSliderRef = useRef<SliderHandle>(null);
+  const sliderRef = useRef<ProgressBarHandle>(null);
+  const volumeSliderRef = useRef<ProgressBarHandle>(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [time, setTime] = useState(0);

@@ -1,3 +1,3 @@
-import {ProgressBar, type SliderHandle} from './ProgressBar.tsx';
+import {ProgressBar, type ProgressBarHandle} from './ProgressBar.tsx';
 
-export  {ProgressBar, type SliderHandle};
+export  {ProgressBar, type ProgressBarHandle};

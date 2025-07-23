@@ -1,9 +1,15 @@
+const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+app.use(cors({
+  origin: 'https://fyzgaston.github.io',
+  credentials: true,
+}));
 
 app.use(bodyParser.json());
 app.use("/api", routes);

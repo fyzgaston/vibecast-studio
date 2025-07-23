@@ -191,7 +191,10 @@ const AudioPlayer = () => {
   return (
     <div className='audio-player'>
       <div className='audio-player__info'>
-        <img className='audio-player__image' src='/track-img.jpg' alt="Обложка альбома"/>
+        <img
+          className='audio-player__image'
+          src={`${import.meta.env.BASE_URL}track-img.jpg`}
+          alt="Обложка альбома"/>
         <div className='audio-player__info-inner'>
           <div className='audio-player__info-title-wrapper'>
             <span className='audio-player__info-name'>{currentTrack?.title}</span>

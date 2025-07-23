@@ -6,6 +6,9 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
+app.use("/audio", express.static(path.join(__dirname, "audio")));
+app.use("/images", express.static(path.join(__dirname, "favicon")));
+
 app.use(cors({
   origin: 'https://fyzgaston.github.io',
   credentials: true,

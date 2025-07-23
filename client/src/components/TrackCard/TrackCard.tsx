@@ -34,7 +34,10 @@ const TrackCard = (props: TrackCardProps) => {
     <div className='track-card' onClick={onPlayClick}>
       <span className='track-card__number'>{id}</span>
       <div className='track-card__wrapper-1'>
-        <img className='track-card__image' src="/track-img.jpg" alt="Обложка альбома"/>
+        <img
+          className='track-card__image'
+          src={`${import.meta.env.BASE_URL}track-img.jpg`}
+          alt="Обложка альбома"/>
         <div className='track-card__info'>
           <span className='track-card__info-name'>{title}</span>
           <span className='track-card__info-artist'>{artist}</span>

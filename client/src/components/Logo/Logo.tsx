@@ -14,14 +14,14 @@ const Logo = ({ className }: LogoProps) => (
   >
     <img
       className='logo__icon-arrow'
-      src="/logo-arrow.svg"
+      src={`${import.meta.env.BASE_URL}logo-arrow.svg`}
       alt="Логотип"
       width={33}
       height={28}
     />
     <img
       className='logo__icon-text'
-      src="/logo-text.svg"
+      src={`${import.meta.env.BASE_URL}logo-text.svg`}
       alt="Логотип"
       width={143}
       height={30}

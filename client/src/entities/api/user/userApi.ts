@@ -1,3 +1,5 @@
+import {API_URL} from '@/entities/api/config.ts';
+
 type User = {
   username: string;
 }
@@ -14,7 +16,7 @@ export type LoginResponse = {
 
 // регистрация юзера
 export const registerUser = async (username: string, password: string): Promise<RegisterResponse> => {
-  const response = await fetch('/api/register', {
+  const response = await fetch(`${API_URL}/api/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -42,7 +44,7 @@ export const registerUser = async (username: string, password: string): Promise<
 
 // авторизация юзера
 export const loginUser = async (username: string, password: string): Promise<LoginResponse> => {
-  const response = await fetch('/api/login', {
+  const response = await fetch(`${API_URL}/api/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

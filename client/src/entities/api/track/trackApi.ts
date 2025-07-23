@@ -1,3 +1,5 @@
+import {API_URL} from '@/entities/api/config.ts';
+
 export type Track = {
   id: number;
   title: string;
@@ -15,7 +17,7 @@ export const fetchTracks = async (): Promise<Track[]> => {
   if (!token) {
     throw new Error('Токен не найден');
   }
-  const response = await fetch('/api/tracks', {
+  const response = await fetch(`${API_URL}/api/tracks`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${token}`,

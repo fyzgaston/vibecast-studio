@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   height: calc(100% - 87px);
+  overflow-y: auto;
 
   @include mobile {
-    height: calc(100% - 30px);
+    max-height: calc(100dvh - 200px);
   }
 
   &__scroll-wrapper {

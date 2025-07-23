@@ -1,6 +1,5 @@
 .audio-player {
   display: grid;
-  //grid-template-columns: 434px 681px 97px;
   grid-template-columns: minmax(336px, 434px) minmax(336px,681px) 97px;
   padding: 20px 30px;
   justify-content: space-between;
@@ -13,9 +12,11 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
     padding: 14px 16px;
     gap: 16px;
+    background-color: var(--color-white);
   }
 
   &__info {

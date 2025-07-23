@@ -3,7 +3,7 @@ import {useRef, forwardRef, useImperativeHandle} from 'react';
 import React from 'react';
 import classNames from 'classnames';
 
-type SliderProps = {
+type ProgressBarProps = {
   value: number;
   min?: number;
   max?: number;
@@ -12,11 +12,11 @@ type SliderProps = {
   className?: string;
 }
 
-export type SliderHandle = {
+export type ProgressBarHandle = {
   setProgress: (percent: number) => void;
 };
 
-export const ProgressBar = forwardRef<SliderHandle, SliderProps>((props, ref) => {
+export const ProgressBar = forwardRef<ProgressBarHandle, ProgressBarProps>((props, ref) => {
   const {
     value,
     min,

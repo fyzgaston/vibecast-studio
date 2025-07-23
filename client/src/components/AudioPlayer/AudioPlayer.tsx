@@ -1,6 +1,6 @@
 import './AudioPlayer.scss';
 import { Icon } from '@/shared/ui/Icon';
-import {ProgressBar, type SliderHandle } from '@/shared/ui/Slider';
+import {ProgressBar, type SliderHandle } from 'shared/ui/ProgressBar';
 import Button from '@/shared/ui/Button';
 import {useState, useEffect, useRef, useCallback} from 'react';
 import { useTrackContext } from '@/shared/lib/TrackContext';

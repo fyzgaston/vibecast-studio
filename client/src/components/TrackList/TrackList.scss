@@ -5,7 +5,7 @@
   overflow-y: auto;
 
   @include mobile {
-    max-height: calc(100dvh - 120px);
+    max-height: calc(100% - 120px);
   }
 
   &__scroll-wrapper {
@@ -67,7 +67,7 @@
 
     @include mobile {
       gap: 20px;
-      padding-bottom: 120px;
+      padding-bottom: 30px;
     }
   }
 }

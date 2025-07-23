@@ -8,7 +8,7 @@ import {queryClient} from '@/shared/lib/queryClient.ts';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='vibecast-studio'>
       <QueryClientProvider client={queryClient}>
         <MusicApp />
       </QueryClientProvider>

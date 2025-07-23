@@ -1,11 +1,5 @@
 @use './helpers' as *;
 
-html {
-  &.is-lock {
-    overflow: hidden;
-  }
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -19,7 +13,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   touch-action: manipulation;
   -webkit-text-size-adjust: 100%;
 }
